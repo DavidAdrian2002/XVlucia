@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Invitación XV - Lucía</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Música de fondo y botón -->
+  <audio id="musica" src="Goo Goo Dolls – Iris [Official Music Video] [4K Remaster] - Goo Goo Dolls.mp3" loop></audio>
+  <button class="btn btn-outline" style="position:fixed;top:10px;right:10px;z-index:1000;" onclick="toggleMusic()">Música</button>
+
+  <!-- ========== PÁGINA 1 - PUZZLE ========== -->
+  <main id="page-puzzle" class="page">
+    <h2 class="center">¡Arma el puzzle para abrir la invitación!</h2>
+    <div id="puzzle-container">
+      <div class="puzzle-slot" data-slot="1"></div>
+      <div class="puzzle-slot" data-slot="2"></div>
+      <div class="puzzle-slot" data-slot="3"></div>
+      <div class="puzzle-slot" data-slot="4"></div>
+    </div>
+    <div id="puzzle-pieces">
+      <img src="pieza-1.1.jpg" alt="pieza1" draggable="true" class="puzzle-piece" data-piece="1">
+      <img src="pieza-2.2.jpg" alt="pieza2" draggable="true" class="puzzle-piece" data-piece="2">
+      <img src="pieza-3.3.jpg" alt="pieza3" draggable="true" class="puzzle-piece" data-piece="3">
+      <img src="pieza-4.4.jpg" alt="pieza4" draggable="true" class="puzzle-piece" data-piece="4">
+    </div>
+  </main>
+
+  <!-- ========== PÁGINA 2 - INVITACIÓN ========== -->
+  <section id="page-invitacion" class="page hidden">
+    <div class="banner">
+      <div class="banner-inner">
+        <div class="banner-text">¡¡Bienvenidos!!</div>
+      </div>
+    </div>
+    <img src="rosa.jpg" alt="img izquierda" class="banner-float left"/>
+    <img src="rosa.jpg" alt="img derecha" class="banner-float right"/>
+
+    <div class="contenedor">
+
+      <!-- Frases -->
+      <div class="card frase">
+  <p id="texto-escribir"></p>
+</div>
+
+
+      <!-- Invitación general -->
+      <div class="card seccion center">
+        <h3><spam><p class="center">Te invito a que pases este maravilloso día junto a mí</p></spam></h3>
+      </div>
+
+      <!-- Información del evento -->
+      <div class="card seccion">
+  <div class="titulo-contenedor">
+    <h3 class="center">꧁༒☬𝓤𝓫𝓲𝓬𝓪𝓬𝓲ó𝓷☬༒꧂</h3>
+  </div>
+  <p class="small center">
+    <h3><spam>Será una reunión con mi familia y seres queridos en el</spam></h3>
+    <h3><spam><strong>Predio Imperio de Villa Quinteros</strong></spam></h3>
+  </p>
+  <div class="mapa">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0000000000005!2d-65.00000000000001!3d-27.000000000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9413650000000001%3A0x0000000000000000!2sLugar%20del%20Evento!5e0!3m2!1ses!2sar!4v1590000000000!5m2!1ses!2sar" 
+      style="width:100%;height:100%;border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</div>
+
+      <!-- Día y contador -->
+     <div class="card seccion center">
+  <div class="titulo-contenedor">
+    <h3>꧁༒☬𝓢𝓮𝓻á 𝓮𝓵...☬༒꧂</h3>
+  </div>
+  <div id="fechaEvento"><h3><spam>Sábado 15 de noviembre de 2025 a las 12:00 hs</spam></h3></div>
+<div class="small"><h2><spam>Faltan:</spam></h2></div>
+<div class="reloj-contenedor">
+  <div class="reloj" id="countdown">-- días --:--:--</div>
+</div>
+
+  
+</div>
+
+      <!-- Confirmar asistencia -->
+      <div class="card seccion">
+  <div class="titulo-contenedor">
+    <h3 class="center">꧁༒☬𝓒𝓸𝓷𝓯𝓲𝓻𝓶𝓪𝓻 𝓪𝓼𝓲𝓼𝓽𝓮𝓷𝓬𝓲𝓪☬༒꧂</h3>
+  </div>
+  <p class="small center"><h3><spam>Por favor confirmá tu asistencia llenando el formulario. Hazlo preferentemente hasta el 30 de Octubre.</spam></h3></p>
+  <div class="acciones center">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfnxx-a_2WOtgLWuLV1TeWuuj8NV48XmB7dL8auvWIIJh5Ydg/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+      <button class="btn btn-primary" id="btn-wapp">Confirmar asistencia</button>
+    </a>
+  </div>
+</div>
+
+
+      <!-- Obsequio -->
+      <div class="card seccion">
+        <p class="small center"><h3><spam>Que me acompañes en este día tan especial para mi será mi mejor regalo, pero si quieres hacerme un presente...</spam></h3></p>
+        <div class="acciones center">
+          <button class="btn btn-outline" id="btn-regalo">Presiona aquí</button>
+        </div>
+      </div>
+
+     
+
+    </div>
+     <!-- Nota importante -->
+<div class="card seccion center">
+  <div class="titulo-contenedor">
+    <h3 class="center">⚠️📢Importante📢⚠️</h3>
+  </div>
+  <div class="nota-piscina small center">
+    <p>Ese día habrá piscina a disposición y quien quiera disfrutar de ella debe llevar traje de baño.</p>
+    
+    <div class="requisitos">
+      <h4>Para las chicas:</h4>
+      <ul>
+        <li>Bikini o malla</li>
+        <li>Ojotas</li>
+        <li>Toalla personal</li>
+      </ul>
+
+      <h4>Para los chicos:</h4>
+      <ul>
+        <li>Short de baño</li>
+        <li>Ojotas</li>
+        <li>Toalla personal</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+ <!-- Pie de página -->
+      <footer class="card footer center">
+        <p>Gracias por acompañarme en este momento que para mi será inolvidable <h2><spam>💕LUCIA💕</spam></h2></p>
+      </footer>
+  </section>
+ 
+
+  <!-- Modal de datos bancarios -->
+  <div id="modal-banco" class="hidden">
+    <div class="modal-backdrop" id="modal-backdrop">
+      <div class="modal">
+        <h3>Mis datos</h3>
+        <ul>
+          <li><strong>Banco:</strong> Mercado Pago</li>
+          <li><strong>CBU / CVU:</strong> 0000003100026924738564</li>
+          <li><strong>Alias:</strong> lucia.765.escudo.mp</li>
+          <li><strong>Titular:</strong> Lucía Gutiérrez</li>
+        </ul>
+        <div class="acciones right">
+          <button class="btn btn-outline" id="cerrar-modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
