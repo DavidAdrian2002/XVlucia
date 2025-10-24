@@ -101,21 +101,19 @@ a {
 /* === PUZZLE === */
 #puzzle-container {
   display: grid;
-  grid-template-columns: repeat(2, 45vw);
-  grid-template-rows: repeat(2, 45vw);
-  gap: 5vw;
+  grid-template-columns: repeat(2, 150px);
+  grid-template-rows: repeat(2, 150px);
+  gap: 10px;
   margin: 24px 0;
-  max-width: 320px;
+  justify-content: center;
 }
 
 .puzzle-slot {
   background: rgba(200, 200, 200, 0.3);
   border: 2px dashed rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  width: 100%;
-  height: 100%;
-  max-width: 150px;
-  max-height: 150px;
+  width: 150px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,17 +122,15 @@ a {
 
 #puzzle-pieces {
   display: flex;
-  gap: 4vw;
+  gap: 12px;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 16px;
 }
 
 .puzzle-piece {
-  width: 45vw;
-  height: 45vw;
-  max-width: 140px;
-  max-height: 140px;
+  width: 140px;
+  height: 140px;
   border-radius: 8px;
   cursor: grab;
   transition: transform 0.2s;
